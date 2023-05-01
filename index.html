@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Works</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            
+        </nav>
+        <div class="header-text">
+            <p>Product Designer</p>
+            <h1>Hello,<br>I'm <span>YAI</span></h1>
+        </div>
+    </div>
+</div>
+<!----------about------------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1><br>
+                <p>I am an aspiring designer who is interested in
+                solving real-life problems<br>with the help of technology
+                and its related terms.<br>Along with the exposure of learning
+                while experiencing<br>the scope of knowledge.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')"> Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                        <li><span>Web Development</span><br>Building a website</li>
+                        <li><span>Journal</span><br>Daily notes of a workshop</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Professional Course at SMI</li>
+                        <li><span>2020 - 2022</span><br>Computer Course at college level</li>
+                        <li><span>2018 - 2020</span><br>Self-taught on computers and technology</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023</span><br>Aspiring Designer at SMI</li>
+                        <li><span>2022</span><br>II PUC in PCMCs</li>
+                        <li><span>2020</span><br>Student</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-----------works---------------->
+<div id="works">
+    <div class="container">
+        <h1 class="sub-title">Works</h1><br>
+        <div class="works-list">
+            <div>
+                <h2>Recycling Time</h2>
+                <p>This was a workshop which i was involved in making a journal,
+                and a calendar for myself for the academic year</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Lines on a walk studio</h2>
+                <p>This was a workshop which i was involved in making a journal,
+                and a calendar for myself for the academic year</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Metaverse</h2>
+                <p>This was a workshop which i was involved in making a journal,
+                and a calendar for myself for the academic year</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--------------contact---------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>contact@example.com</p>
+                <p>0123456789</p>
+                <div class="social-icons">
+                    <a href="https://faceboob.com/"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <p>Copyright YAI. Made with <i class=""></i></p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classlist.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classlist.remove("active-tab");
+        }
+        event.currentTarget.classlist.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+</script>
+
+
+</body>
+</html>
